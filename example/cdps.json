@@ -1,17 +1,17 @@
 {
     "version": "1.0.0",
-    "name": "Example",
+    "name": "discord_webhook",
     "description": {
-        "zh_tw": "CDPS 的 範例擴充"
+        "zh_tw": "Discord 的 webhook"
     },
     "author": [
-        "YuYu1015"
+        "PiscesXD"
     ],
     "dependencies": {
-        "cdps": ">=1.0.11"
+        "cdps": ">=1.0.13"
     },
     "resources": [
         "AGPL-3.0"
     ],
-    "link": "https://github.com/ExpTechTW/CDPS"
+    "link": "https://github.com/PiscesXD/cdps-discordwebhook"
 }
