@@ -117,6 +117,6 @@ class DiscordWebhook:
         response = requests.post(self.WebhookUrl, headers=headers, data=json.dumps(senddata))
         
         if response.status_code == 204:
-            print("done")
+            return {"code" : response.status_code , 'message' : 'done'}
         else:
-            print(f"error_code {response.status_code}, error: {response.text}")
+            return {"code" : response.status_code , 'message' : {response.text}}
