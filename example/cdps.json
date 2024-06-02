@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "discord_webhook",
     "description": {
         "zh_tw": "Discord 的 webhook"
