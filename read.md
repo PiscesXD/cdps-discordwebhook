@@ -30,7 +30,7 @@ set_description("")
 
 設定color
 ```py
-set_color("")
+set_color("") < 例如 0xff0000
 ```
 
 設定image
