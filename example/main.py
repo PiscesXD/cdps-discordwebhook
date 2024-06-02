@@ -1,5 +1,7 @@
 import requests
 import json
+import time
+from datetime import datetime 
 
 class DiscordWebhook:
     def __init__(self, WebhookUrl = None):
@@ -24,6 +26,8 @@ class DiscordWebhook:
         senddata = {"username" : self.username,
                    "avatar_url" : self.avatar_url,
                    "embeds": [self.embed]}
+
+        print(senddata)
         
         if self.content:
             senddata["content"] = self.content
@@ -89,12 +93,17 @@ class DiscordWebhook:
         if icon_url:
             self.embed["author"]["icon_url"] = icon_url
 
-
     def set_thumbnail(self, url):
         self.embed["thumbnail"] = {"url": url}
 
+    def set_timestamp(self, timestamp=None):
+        if timestamp is not None:
+            self.embed["timestamp"] = timestamp.isoformat()
+        else:
+            self.embed["timestamp"] = datetime.utcnow().isoformat()
+
     def send(self):
-        self.__send_webhook__()
+        return self.__send_webhook__()
 
     def embedssend(self , lists):
         if not isinstance(lists, list):

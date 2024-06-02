@@ -30,7 +30,7 @@ set_description("")
 
 設定color
 ```py
-set_color("") < 例如 0xff0000
+set_color("")
 ```
 
 設定image
@@ -68,6 +68,11 @@ set_author(test="",icon_url="") < icon_url 圖片網址
 set_thumbnail("")< 填入圖片網址
 ```
 
+設定timestamp
+```py
+set_timestamp() < 可填寫 也可不填寫 請記住要使用utc來表示
+```
+
 發送訊息
 ```py
 send()
@@ -95,6 +100,7 @@ webhook.set_title("你好")
 webhook.set_color("0xFF0000")
 webhook.set_value("早安" , "午安")
 webhook.set_value("早安" , "午安" , True)
+webhool.set_timestamp()
 webhook.set_author("author" , "https://m.media-amazon.com/images/I/51y8GUVKJoL.jpg")
 webhook.send()
 ```
