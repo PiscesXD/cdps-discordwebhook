@@ -88,6 +88,11 @@ dataembed()
 embedssend([])
 ```
 
+回傳值只有 send 和 embedssend 有格式為
+```py
+{"code" : code , "message" : message} 
+```
+
 ## 範例1
 
 # 發送單則embed
