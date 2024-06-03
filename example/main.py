@@ -26,8 +26,6 @@ class DiscordWebhook:
         senddata = {"username" : self.username,
                    "avatar_url" : self.avatar_url,
                    "embeds": [self.embed]}
-
-        print(senddata)
         
         if self.content:
             senddata["content"] = self.content
