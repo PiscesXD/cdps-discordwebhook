@@ -154,8 +154,6 @@ class DiscordWebhook:
         """
         功能 : 嵌入訊息_設置顏色
         color : 名稱
-        value : 訊息
-        inline : 是否在同一行，但要使用bool
         """
         if color in self.colors:
             self.embed["color"] = self.colors[color]
